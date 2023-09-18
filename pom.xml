@@ -38,7 +38,7 @@
     </dependencies>
 
     <build>
-        <finalName>my-spark-sql-cluster</finalName>  <!-- 最终package打包的jar名称，注意这里没有版本号了。 -->
+        <finalName>spark-sql-cluster</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 # Copyright◎2023, Huangyichun. All rights reserved.
 #
 # This program start a spark-sql session to yarn cluster.
@@ -82,10 +82,10 @@ do
     esac
 done
 
-cmd="spark-submit --class org.apache.spark.sql.hive.my.MySparkSQLCLIDriver  \
+cmd="spark-submit --class org.apache.spark.sql.hive.cluster.SparkSqlCliClusterDriver  \
      --master yarn --deploy-mode cluster \
      --name \"${nameyarn}\" \
-     my-spark-sql-cluster.jar "
+     spark-sql-cluster.jar "
 
 # kerberos kinit
 if [ ${keyberosCount} -eq 2 ] ; then
